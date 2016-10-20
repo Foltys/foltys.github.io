@@ -1,0 +1,21 @@
+.container {
+    padding-top: 25px;
+    margin:10px auto;
+    width:600px;
+    text-align: center;
+}
+form p label {
+    width:20%;
+}
+form p input {
+    width: 80%;
+}
+form p textarea {
+    resize: none;
+    width: 80%;
+    background-color:#FFF !important;
+}
+form p.submit input {
+    width: 40%;
+    margin: 0 auto;
+}
