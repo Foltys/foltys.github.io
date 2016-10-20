@@ -8,7 +8,7 @@
         var textarea = this.find("textarea");
         var inputText = this.find("#text");
 
-        setInterval(function () {updateChat(textarea, options.id);}, 20);
+        setInterval(function () {updateChat(textarea, options.id);}, 500);
 
         this.submit(function (event) {
             event.preventDefault();
@@ -32,6 +32,7 @@
     var updateChat = function (textarea, chatId) {
         time = 0;
         $.ajax({
+            cache: false,
             type: "GET",
             url: 'chatstore.xml',
             dataType: "xml"
@@ -46,6 +47,7 @@
     var loadChat = function (textarea, chatId) {
         textarea.val("");
         $.ajax({
+            cache:false,
             type: "GET",
             url: 'chatstore.xml',
             dataType: "xml"
@@ -54,7 +56,7 @@
             var texts = xml.find("chat[id=" + chatId + "]");
             messagesCount = texts.attr("date");
             texts.find("text").each(function () {
-                textarea.val(textarea.val() + $(this).attr("date") + " " + $(this).attr("from") + ": " + $(this).text() + "\n");
+                textarea.val(textarea.val() +  $(this).attr("from") + ": " + $(this).text() + "\n");
             })
         });
     }
