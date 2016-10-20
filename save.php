@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 if ($_POST["text"] && $_POST["id"] && $_POST["from"]) {
 	$id = $_POST["id"];
 	$text = $_POST["text"];
