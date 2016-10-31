@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: text/html");
 if ($_GET["text"] && $_GET["id"] && $_GET["from"]) {
 	$id = $_GET["id"];
 	$text = $_GET["text"];
@@ -8,13 +9,15 @@ if ($_GET["text"] && $_GET["id"] && $_GET["from"]) {
 	$time = time();
 
 	$xpath = $xml->xpath("/chats/chat[@id=$id]")[0];
-	$xpath["date"] = $xpath["date"]++;
+	$xpath["date"] = $xpath["date"]+1;
+	echo $xpath["date"];
 
 	$child = $xpath->addChild("text", $text);
 	$child->addAttribute("from", $from);
 	$child->addAttribute("date", $time);
 
 	$xml->saveXML("chatstore.xml");
+	echo "saved";
 }
 
 /**

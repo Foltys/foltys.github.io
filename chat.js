@@ -19,13 +19,14 @@
 
     };
     var sendChat = function (text, id, from) {
-        $.post({
-            url: 'save.php',
+        $.get({
+            url: 'save_get.php',
             data: {
                 id: id,
                 text: text,
                 from: from
-            }
+            },
+            dataType:"text/html"
         });
     };
 
@@ -39,6 +40,7 @@
         }).done(function (xml) {
             xml = $(xml);
             var tmp = xml.find("chat[id=" + chatId + "]");
+            console.log(messagesCount);
             if (messagesCount < tmp.attr("date")) {
                 loadChat(textarea,chatId);
             }
