@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(54, 54, 54);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li,
+a,
+button,
+content {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.nav_links {
+  list-style: none;
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0px 40px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover {
+  color: #55c7ec;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: #399cbd;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: #399cbd9a;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  width: 100%;
+  position: fixed;
+  z-index: 12;
+  border-bottom: 1px solid #399cbd;
+}
+
+.title {
+  font-size: 35px;
+}
+
+content {
+  display: block;
+  position: relative;
+  top: 100px;
+  padding: 30px 100px;
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 55px;
+    font-size: 50px;
+    left: -45px;
+    position:relative;
+}
+h2 {
+    margin: 20px 0px;
+}
+
+h1:before {
+    content: '';
+    position: relative;
+    display: block;
+    margin-top: -100px;
+    padding-bottom: 100px;
+}
+
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding-bottom: 100px;
+}
+
+section p {
+    text-indent: 50px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    /* margin-bottom: 20px; */
+    color:rgb(131, 131, 131)
+}
+
+section i {
+    font-size: 3em;
+    margin-left: 5px;
+}
+
+section span {
+    padding: 0px 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: 'IM Fell English SC', serif;
+    font-weight: 400;
+}
+
+section span.lg {
+    font-size: 1em;
+}
+
