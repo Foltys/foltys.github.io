@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 li,
@@ -51,7 +51,6 @@ button:hover {
   background-color: #399cbd9a;
 }
 
-
 header {
   display: flex;
   justify-content: space-between;
@@ -59,8 +58,10 @@ header {
   padding: 30px 10%;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 12;
   border-bottom: 1px solid #399cbd;
+  transition: all 0.3s ease 0s;
 }
 
 .title {
@@ -75,52 +76,119 @@ content {
 }
 
 h1 {
-    text-align: left;
-    margin-bottom: 55px;
-    font-size: 50px;
-    left: -45px;
-    position:relative;
+  text-align: left;
+  margin-bottom: 55px;
+  font-size: 50px;
+  left: -45px;
+  position: relative;
 }
 h2 {
-    margin: 20px 0px;
+  margin: 20px 0px;
 }
 
 h1:before {
-    content: '';
-    position: relative;
-    display: block;
-    margin-top: -100px;
-    padding-bottom: 100px;
+  content: "";
+  position: relative;
+  display: block;
+  margin-top: -100px;
+  padding-bottom: 100px;
+  z-index: -100;
 }
 
 section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding-bottom: 100px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding-bottom: 100px;
 }
 
 section p {
-    text-indent: 50px;
-    line-height: 30px;
-    letter-spacing: 2px;
-    /* margin-bottom: 20px; */
-    color:rgb(131, 131, 131)
+  text-indent: 50px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  /* margin-bottom: 20px; */
+  color: rgb(131, 131, 131);
 }
 
 section i {
-    font-size: 3em;
-    margin-left: 5px;
+  font-size: 3em;
+  margin-left: 5px;
 }
 
 section span {
-    padding: 0px 20px;
-    display: inline-block;
-    margin-bottom: 20px;
-    font-family: 'IM Fell English SC', serif;
-    font-weight: 400;
+  padding: 0px 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: "IM Fell English SC", serif;
+  font-weight: 400;
 }
 
 section span.lg {
-    font-size: 1em;
+  font-size: 1em;
 }
 
+#checkbox_1 {
+  visibility: hidden;
+}
+#checkbtn {
+  visibility: hidden;
+  position: fixed;
+  right: 0px;
+  margin: 20px;
+  z-index: 20;
+  color: #e0e0e0;
+}
+
+#checkbox_1:checked ~ header {
+  top: 0;
+}
+
+@media (max-width: 600px) {
+  section {
+    max-width: 100%;
+  }
+  content {
+    padding: 30px 10px;
+  }
+  h1 {
+    left: 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  header {
+    top: -100%;
+    flex-direction: column;
+  }
+
+  .nav_links li {
+    display: block;
+    margin-top: 25px;
+    /* padding: 0px 40px; */
+  }
+  .nav_links li a {
+    font-size: 25px;
+  }
+
+  /* h1:before {
+    margin-top: -225px;
+    padding-bottom: 225px;
+  } */
+  content {
+    top: 0;
+  }
+  #checkbtn {
+    visibility: visible;
+  }
+  /* .nav_links li {
+        display: block;
+        margin-bottom: 10px;
+    } */
+
+  /* h1:before {
+    content: "";
+    position: relative;
+    display: block;
+    margin-top: -150px;
+    padding-bottom: 150px;
+  } */
+}

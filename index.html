@@ -21,15 +21,26 @@
   </head>
 
   <body>
+    <input type="checkbox" id="checkbox_1" />
+    <label for="checkbox_1" id="checkbtn"
+      ><i class="fas fa-bars fa-3x"></i
+    ></label>
     <header>
       <!-- <a class="title" href="#">Fooly</a> -->
       <ul class="nav_links">
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#career">Career</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#intro" onclick="menuSwitch()">Introduction</a></li>
+        <li><a href="#career" onclick="menuSwitch()">Career</a></li>
+        <li><a href="#skills" onclick="menuSwitch()">Skills</a></li>
+        <li><a href="#about" onclick="menuSwitch()">A bit more</a></li>
       </ul>
-      <a class="cta" href="#"><button>Contact</button></a>
+      <!-- <a class="cta" href="mailto:folejtar.jakub@gmail.com"><button>Contact</button></a> -->
     </header>
+    <script>
+      function menuSwitch() {
+        const menuSwitch = document.getElementById("checkbox_1");
+        menuSwitch.checked = false;
+      }
+    </script>
 
     <content>
       <section>
@@ -40,19 +51,19 @@
           developer is not only a job for me, but rather a passion. I also like
           to take up on a challenge and enjoy being perfectionist about my work.
         </p>
-        <br>
+        <br />
         <p>
           My interests towards programming started when I was around 12 years
           old. The first spark was set by my older brother who at that time was
           already full time coder, doing his magic in html and css and partially
           in Flash (R.I.P.). I picked up on those skills and tried to hone them,
           I was trying to code something all the time, and in my young mind,
-          stupid ideas were flowing all the time.
+          stupid ideas were flowing...
         </p>
-        <br>
+        <br />
         <p>
           I was attending a general high school, with no specific direction set
-          to continue afterwards. So I decided it would be best, at 15, to
+          to continue afterwards. So at 15 y.o. I decided it would be best to
           switch to a more specific high school that specialises in programming.
           I started attending SPŠE Ječná and graduated there after 4 years. I
           did not really enjoy the school as the kind of stuff they were
@@ -60,7 +71,7 @@
           coming out every now and then, so I had to catch up and learn on my
           own.
         </p>
-        <br>
+        <br />
         <p>
           After graduating, I jumped straight into university (ČVUT FIT) to
           further enhance my programming skills, but after half a year I dropped
@@ -105,7 +116,7 @@
           One as the original support developer, the other as a data analyst and
           data provider for different needs across the whole company.
         </p>
-        <br>
+        <br />
         <p>
           In 2017, after gathering some experience I joined different team, that
           was focused solely on programming, specifically grabbing data from
@@ -171,6 +182,22 @@
         <span class="lg"> FIGMA </span>
         <span class="lg"> AFFINITY DESIGNER </span>
         <span class="lg"> AFFINITY PHOTO </span>
+        <h2>- Languages</h2>
+        <span class="lg">ENG [advanced]</span>
+        <span class="lg">CZ [native]</span>
+      </section>
+      <section>
+        <h1 id="about">- Little bit more about me</h1>
+        <p>
+          I am a man of many interests, trying lots of different things, from
+          woodworking through PC games to learning musical instruments.
+          Currently I am quite hooked in the woodworking hobby, but when the
+          weather or the mood is not right, I try to learn something new about
+          programming, such as react-native, unity, setting up servers on
+          different hostings... When it comes to sports, I like to rather play
+          them myself than to watch pro players. I like to gather knowledge also
+          on
+        </p>
       </section>
     </content>
     <!-- your content here... -->
@@ -178,6 +205,5 @@
       src="https://kit.fontawesome.com/6c3c11fa2d.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/scripts.js" />
   </body>
 </html>
