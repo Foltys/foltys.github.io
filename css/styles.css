@@ -145,10 +145,11 @@ section span.lg {
 footer {
   border-top: 1px solid #55c7ec;
   /* border-top-color: #55c7ec; */
-  position: absolute;
+  position: relative;
   bottom: 0;
   line-height: 30px;
   display: inline-block;
+  width: 100%;
 }
 
 @media (max-width: 600px) {
